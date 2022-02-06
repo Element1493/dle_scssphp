@@ -2,7 +2,7 @@
 /*
  * Автор модуля: Сергей Зверев <element1493@yandex.ru>
  * Библиотека: scssphp 1.10.0 [https://scssphp.github.io/scssphp/]
- * Версия модуля: 1.0.0 (30.01.2022)
+ * Версия модуля: 1.0.1 (06.02.2022)
  */
 
 /**
@@ -24,7 +24,7 @@ $outputStyle = isset($outputStyle) ? true : false;
 // Проверка на изменения SCSS файлов.
 $scssHash = isset($scssHash) ? true : false;
 // Путь для @import
-$importPaths = isset($importPaths) ? $importPaths : false;
+$importPaths = (!empty($importPaths))?str_ireplace('{THEME}','templates/'.$config['skin'],$importPaths):false;
 // Генерировать  sourceMap.
 $sourceMap = isset($sourceMap) ? $sourceMap : false;
 
