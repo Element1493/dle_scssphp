@@ -14,14 +14,14 @@
 > Для параметров предусмотрен только тег: `{THEME}`, при попытке добавить другие теги приведёт к ошибке.
 
 ## Параметры
-|Название|Описание|По умолчанию|Пример|
-|-|-|-|-|
-|**scss**|Путь к файлу или файлам scss, каждый новый путь к файлу прописываем через запятую|`{THEME}/scss/styles.scss`|`{include file="engine/modules/SCSS/scssphp.php?scss={THEME}/scss/styles.scss"}`|
-|**css**|Путь к файлу или файлам scss, каждый новый путь к файлу прописываем через запятую|`{THEME}/css/styles.css`|`{include file="engine/modules/SCSS/scssphp.php?css={THEME}/css/styles.css"}`|
-|**outputStyle**|Сжать выходной файл CSS|`false`|`{include file="engine/modules/SCSS/scssphp.php?outputStyle=true"}`|
-|**scssHash**|Компилировать в файл CSS, только после изменение одного или несколько файлов SCSS (Для снижения нагрузки рекомендую включить)|`false`|`{include file="engine/modules/SCSS/scssphp.php?scssHash=true"}`|
-|**importPaths**|Если файлы для импорта **@import** находятся в другой папке, то указав путь при компиляции подхватить их из указанной папке|`false`|`{include file="engine/modules/SCSS/scssphp.php?importPaths={THEME}/import/"}`|
-|**sourceMap**|Генерировать  sourceMap, в папку с компилированным файлом CSS|`false`|`{include file="engine/modules/SCSS/scssphp.php?sourceMap=true"}`|
+|Название|Описание|По умолчанию|
+|-|-|-|
+|**scss**|Путь к файлу или файлам scss, каждый новый путь к файлу прописываем через запятую|`{THEME}/scss/styles.scss`|
+|**css**|Путь к файлу или файлам scss, каждый новый путь к файлу прописываем через запятую|`{THEME}/css/styles.css`|
+|**outputStyle**|Сжать выходной файл CSS|`false`|
+|**scssHash**|Компилировать в файл CSS, только после изменение одного или несколько файлов SCSS (Для снижения нагрузки рекомендую включить)|`false`|
+|**importPaths**|Если файлы для импорта **@import** находятся в другой папке, то указав путь при компиляции подхватить их из указанной папке|`false`|
+|**sourceMap**|Генерировать  sourceMap, в папку с компилированным файлом CSS|`false`|
 
 ### Пример:
 `{include file="engine/modules/SCSS/scssphp.php?scss={THEME}/scss/styles1.scss,{THEME}/scss/styles2.scss&css={THEME}/css/styles.css&outputStyle=true&scssHash=true&sourceMap=true"}`
