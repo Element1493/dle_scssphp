@@ -7,7 +7,7 @@
 3. Чтобы модуль начал компилировать необходимо создать в шаблоне папку с файлом: `/scss/styles.scss`, но если у вас несколько файлов или расположен(ы) в другой папке то дописываем в `{include file="engine/modules/SCSS/scssphp.php"}` свой путь к файлу, например: `{include file="engine/modules/SCSS/scssphp.php?scss={THEME}/scss/styles.scss"}`, если несколько то прописываем через запятую: `{include file="engine/modules/SCSS/scssphp.php?scss={THEME}/scss/styles1.scss,{THEME}/scss/styles2.scss"}`
 4. По умолчанию компилируемый файл CSS создаётся в шаблоне: `/css/styles.css`, также предусмотрен параметр для указа нового пути для файла CSS: `{include file="engine/modules/SCSS/scssphp.php?css={THEME}/css/styles.css"}`
 > :warning: **ВНИМАНИЕ:**
-> Для параметров предусмотрено только тег: `{THEME}`, при попытке добавить другие теги приведёт к ошибке.
+> Для параметров предусмотрен только тег: `{THEME}`, при попытке добавить другие теги приведёт к ошибке.
 
 ## Параметры
 |Название|Описание|По умолчанию|Пример|
