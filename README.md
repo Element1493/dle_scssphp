@@ -1,4 +1,8 @@
 # dle_scssphp
+![version](https://img.shields.io/badge/version-1.0.1-orange "Version")
+![dle](https://img.shields.io/badge/DLE-15%3C-green "DLE")
+[![MIT License](https://img.shields.io/badge/license-MIT-blue "MIT License")](https://github.com/Element1493/dle_scssphp/blob/main/LICENSE)
+
 Данный модуль c помощью библиотеки [SCSSPHP](https://github.com/leafo/scssphp/) автоматически компилирует файлы SCSS в файл CSS.
 
 ## Инструкция
