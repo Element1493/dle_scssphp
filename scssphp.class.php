@@ -2,7 +2,7 @@
 /*
  * Автор модуля: Сергей Зверев <element1493@yandex.ru>
  * Библиотека: scssphp 1.10.0 [https://scssphp.github.io/scssphp/]
- * Версия модуля: 1.0.1 (06.02.2022)
+ * Версия модуля: 1.0.2 (04.04.2022)
  */
 
 require_once "scssphp/scss.inc.php";
@@ -70,7 +70,7 @@ class dleScssCompiler{
 		/*SCSS Hash*/
 		if($this->config->scssHash){
 			$scss_hash = hash('md5',file_get_contents($this->config->fileScss));
-			$is_hash = (!file_exists($this->file_hash) || ($scss_hash!=file_get_contents($this->file_hash)))?true:false;
+			$is_hash = (!file_exists($this->fileHash) || ($scss_hash!=file_get_contents($this->fileHash)))?true:false;
 		}else{
 			$is_hash = true;
 		}
@@ -109,7 +109,7 @@ class dleScssCompiler{
 					/*Source Maps*/
 					if($this->config->sourceMap) file_put_contents($this->config->fileCss.'.map', $result->getSourceMap());
 					/*SCSS Hash*/
-					if($this->config->scssHash) file_put_contents($this->file_hash, $scss_hash);
+					if($this->config->scssHash) file_put_contents($this->fileHash, $scss_hash);
 					
 					if(!empty($arScss['error'])){
 						$return = array(
